@@ -49,4 +49,4 @@ def index() -> str:
                            votecards = votecards_list)
 
 if __name__ == "__main__":
-    serve(app, host='0.0.0.0', port=80)
+    serve(app, host='0.0.0.0', port=os.environ.get('PORT') if os.environ.get('PORT') else 5000)
