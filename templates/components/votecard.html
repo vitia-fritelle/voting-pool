@@ -1,0 +1,24 @@
+{% macro voting_card(src, alt, score, index) %}
+    <div class="card voting-card">
+        <img class="card-img-top book-image" src="{{src}}" alt="{{alt}}">
+        <div class="card-body">
+            Votos
+            <div class=score>
+                {{score}}
+            </div>
+            <div class="voting">
+                <form action="/votecard/upvote/{{index}}" method="post">
+                    <button>
+                        <ion-icon class="upvote" name="chevron-up-circle"></ion-icon>
+                    </button>
+                </form>
+                <form action="/votecard/downvote/{{index}}" method="post">
+                    <button>
+                        <ion-icon class="downvote" name="chevron-down-circle"></ion-icon>
+                    </button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+{% endmacro %}

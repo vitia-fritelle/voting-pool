@@ -1,7 +1,6 @@
 *.py[cod]
 *.json
 *.env
-
 # C extensions
 *.so
 
