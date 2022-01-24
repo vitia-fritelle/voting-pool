@@ -1,7 +1,5 @@
 import json
 import re
-import os
-from dotenv import load_dotenv
 
 def json_to_env(keys_path:str) -> None:
     '''This function has the only purpose of converting the json file 

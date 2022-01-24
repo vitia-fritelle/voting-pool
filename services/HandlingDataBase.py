@@ -1,6 +1,4 @@
-import __init__
 import os
-import json
 from entities.VoteCard import VoteCard
 from entities.GoogleSheets import GoogleSheet
 from dotenv import load_dotenv
