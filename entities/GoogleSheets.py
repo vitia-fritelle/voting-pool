@@ -5,12 +5,12 @@ from google.oauth2 import service_account
 class GoogleSheet:
 
 
-        def __init__(self, account_file:str, id:str, scopes=None):
+        def __init__(self, account_info:str, id:str, scopes=None):
                 self._scopes = [*scopes] if scopes else None
-                self._account_file = account_file
+                self._account_info = account_info
                 self.id = id
                 self._credentials = (service_account.Credentials
-                                     .from_service_account_file(account_file, 
+                                     .from_service_account_info(account_info, 
                                                                 scopes=scopes))
                 self.sheet = (
                         build('sheets', 'v4', credentials=self._credentials)
